@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		592EFD6C171897DA00117EC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592EFD6B171897DA00117EC2 /* UIKit.framework */; };
+		592EFD6E171897DA00117EC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592EFD6D171897DA00117EC2 /* Foundation.framework */; };
+		592EFD70171897DA00117EC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592EFD6F171897DA00117EC2 /* CoreGraphics.framework */; };
+		592EFD76171897DA00117EC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 592EFD74171897DA00117EC2 /* InfoPlist.strings */; };
+		592EFD78171897DA00117EC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 592EFD77171897DA00117EC2 /* main.m */; };
+		592EFD7C171897DA00117EC2 /* CountDownAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 592EFD7B171897DA00117EC2 /* CountDownAppDelegate.m */; };
+		592EFD7E171897DA00117EC2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 592EFD7D171897DA00117EC2 /* Default.png */; };
+		592EFD80171897DA00117EC2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 592EFD7F171897DA00117EC2 /* Default@2x.png */; };
+		592EFD82171897DA00117EC2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 592EFD81171897DA00117EC2 /* Default-568h@2x.png */; };
+		592EFD85171897DA00117EC2 /* CountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592EFD84171897DA00117EC2 /* CountDownViewController.m */; };
+		592EFD88171897DA00117EC2 /* CountDownViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 592EFD86171897DA00117EC2 /* CountDownViewController_iPhone.xib */; };
+		592EFD8B171897DA00117EC2 /* CountDownViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 592EFD89171897DA00117EC2 /* CountDownViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		592EFD68171897DA00117EC2 /* CountDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		592EFD6B171897DA00117EC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		592EFD6D171897DA00117EC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		592EFD6F171897DA00117EC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		592EFD73171897DA00117EC2 /* CountDown-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CountDown-Info.plist"; sourceTree = "<group>"; };
+		592EFD75171897DA00117EC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		592EFD77171897DA00117EC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		592EFD79171897DA00117EC2 /* CountDown-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CountDown-Prefix.pch"; sourceTree = "<group>"; };
+		592EFD7A171897DA00117EC2 /* CountDownAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountDownAppDelegate.h; sourceTree = "<group>"; };
+		592EFD7B171897DA00117EC2 /* CountDownAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDownAppDelegate.m; sourceTree = "<group>"; };
+		592EFD7D171897DA00117EC2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		592EFD7F171897DA00117EC2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		592EFD81171897DA00117EC2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		592EFD83171897DA00117EC2 /* CountDownViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountDownViewController.h; sourceTree = "<group>"; };
+		592EFD84171897DA00117EC2 /* CountDownViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDownViewController.m; sourceTree = "<group>"; };
+		592EFD87171897DA00117EC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CountDownViewController_iPhone.xib; sourceTree = "<group>"; };
+		592EFD8A171897DA00117EC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CountDownViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		592EFD65171897DA00117EC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592EFD6C171897DA00117EC2 /* UIKit.framework in Frameworks */,
+				592EFD6E171897DA00117EC2 /* Foundation.framework in Frameworks */,
+				592EFD70171897DA00117EC2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		592EFD5F171897DA00117EC2 = {
+			isa = PBXGroup;
+			children = (
+				592EFD71171897DA00117EC2 /* CountDown */,
+				592EFD6A171897DA00117EC2 /* Frameworks */,
+				592EFD69171897DA00117EC2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		592EFD69171897DA00117EC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				592EFD68171897DA00117EC2 /* CountDown.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		592EFD6A171897DA00117EC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				592EFD6B171897DA00117EC2 /* UIKit.framework */,
+				592EFD6D171897DA00117EC2 /* Foundation.framework */,
+				592EFD6F171897DA00117EC2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		592EFD71171897DA00117EC2 /* CountDown */ = {
+			isa = PBXGroup;
+			children = (
+				592EFD7A171897DA00117EC2 /* CountDownAppDelegate.h */,
+				592EFD7B171897DA00117EC2 /* CountDownAppDelegate.m */,
+				592EFD83171897DA00117EC2 /* CountDownViewController.h */,
+				592EFD84171897DA00117EC2 /* CountDownViewController.m */,
+				592EFD86171897DA00117EC2 /* CountDownViewController_iPhone.xib */,
+				592EFD89171897DA00117EC2 /* CountDownViewController_iPad.xib */,
+				592EFD72171897DA00117EC2 /* Supporting Files */,
+			);
+			path = CountDown;
+			sourceTree = "<group>";
+		};
+		592EFD72171897DA00117EC2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				592EFD73171897DA00117EC2 /* CountDown-Info.plist */,
+				592EFD74171897DA00117EC2 /* InfoPlist.strings */,
+				592EFD77171897DA00117EC2 /* main.m */,
+				592EFD79171897DA00117EC2 /* CountDown-Prefix.pch */,
+				592EFD7D171897DA00117EC2 /* Default.png */,
+				592EFD7F171897DA00117EC2 /* Default@2x.png */,
+				592EFD81171897DA00117EC2 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		592EFD67171897DA00117EC2 /* CountDown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 592EFD8E171897DA00117EC2 /* Build configuration list for PBXNativeTarget "CountDown" */;
+			buildPhases = (
+				592EFD64171897DA00117EC2 /* Sources */,
+				592EFD65171897DA00117EC2 /* Frameworks */,
+				592EFD66171897DA00117EC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CountDown;
+			productName = CountDown;
+			productReference = 592EFD68171897DA00117EC2 /* CountDown.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		592EFD60171897DA00117EC2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CountDown;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = TheGamingArt;
+			};
+			buildConfigurationList = 592EFD63171897DA00117EC2 /* Build configuration list for PBXProject "CountDown" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 592EFD5F171897DA00117EC2;
+			productRefGroup = 592EFD69171897DA00117EC2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				592EFD67171897DA00117EC2 /* CountDown */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		592EFD66171897DA00117EC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592EFD76171897DA00117EC2 /* InfoPlist.strings in Resources */,
+				592EFD7E171897DA00117EC2 /* Default.png in Resources */,
+				592EFD80171897DA00117EC2 /* Default@2x.png in Resources */,
+				592EFD82171897DA00117EC2 /* Default-568h@2x.png in Resources */,
+				592EFD88171897DA00117EC2 /* CountDownViewController_iPhone.xib in Resources */,
+				592EFD8B171897DA00117EC2 /* CountDownViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		592EFD64171897DA00117EC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592EFD78171897DA00117EC2 /* main.m in Sources */,
+				592EFD7C171897DA00117EC2 /* CountDownAppDelegate.m in Sources */,
+				592EFD85171897DA00117EC2 /* CountDownViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		592EFD74171897DA00117EC2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				592EFD75171897DA00117EC2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		592EFD86171897DA00117EC2 /* CountDownViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				592EFD87171897DA00117EC2 /* en */,
+			);
+			name = CountDownViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		592EFD89171897DA00117EC2 /* CountDownViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				592EFD8A171897DA00117EC2 /* en */,
+			);
+			name = CountDownViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		592EFD8C171897DA00117EC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		592EFD8D171897DA00117EC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		592EFD8F171897DA00117EC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CountDown/CountDown-Prefix.pch";
+				INFOPLIST_FILE = "CountDown/CountDown-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		592EFD90171897DA00117EC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CountDown/CountDown-Prefix.pch";
+				INFOPLIST_FILE = "CountDown/CountDown-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		592EFD63171897DA00117EC2 /* Build configuration list for PBXProject "CountDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592EFD8C171897DA00117EC2 /* Debug */,
+				592EFD8D171897DA00117EC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		592EFD8E171897DA00117EC2 /* Build configuration list for PBXNativeTarget "CountDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592EFD8F171897DA00117EC2 /* Debug */,
+				592EFD90171897DA00117EC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 592EFD60171897DA00117EC2 /* Project object */;
+}
