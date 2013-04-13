@@ -11,20 +11,24 @@
 #import <QuartzCore/QuartzCore.h>
 
 #define timeToCountDownFrom 10
+#define maxScaleForLabel 2
 
 @interface CountDownViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 @property (weak, nonatomic) IBOutlet UITextField *codeTextView;
 @property (strong, nonatomic) NSTimer *timer;
+@property (strong, nonatomic) NSTimer *labelAnimation;
 
 @end
 
 @implementation CountDownViewController
 {
     NSDate *_startDate;
+    double _scale;
 }
 
+#pragma mark - textField delegate functions
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -48,45 +52,13 @@
 }
 
 
--(void)endCountDown
-{
-    [self.timer invalidate];
-}
 
--(NSTimer *)timer{
-    if (!_timer) {
-        _timer = [[NSTimer alloc]init];
-    }
-    return _timer;
-}
 
--(void)initiateCountDown
-{
-    _startDate = [NSDate date];
-    self.timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
-    
-    //    //[self scaleLabel];
-    //    SEL methodCall = @selector(scaleLabel:);
-    //
-    //    NSMethodSignature *signature = [NSMethodSignature instanceMethodSignatureForSelector:methodCall];
-    //    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-    //    [invocation setTarget:self];
-    //    [invocation setSelector:methodCall];
-    //    NSNumber *time = @1;
-    //    [invocation setArgument:&time atIndex:2];
-    //    [NSTimer scheduledTimerWithTimeInterval:0.8f invocation:invocation repeats:YES];
-    
-    [NSTimer scheduledTimerWithTimeInterval:0.8f target:self selector:@selector(scaleLabel) userInfo:nil repeats:YES];
-    //[self rockLabel];
-    [self fadeLabelInAndOut];
-
-    
-}
+#pragma mark -  Animations for label
 
 -(void)fadeLabelInAndOut
 {
-#pragma mark - fading animation for label
+
     CAKeyframeAnimation *fadeInAndOut = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
     [fadeInAndOut setValues:@[@1.0, @0.5]];
     [fadeInAndOut setAutoreverses:YES];
@@ -101,29 +73,38 @@
 
 -(void)scaleLabel
 {
-#pragma mark - scaling animation for label
+
     
     NSDate *currentDate = [NSDate date];
     NSTimeInterval elaspsedTime = [currentDate timeIntervalSinceDate:_startDate];
-    double sizeScale = 2;
     NSTimeInterval delta = timeToCountDownFrom - elaspsedTime;
-    // Create the keyframe animation object
-    CAKeyframeAnimation *scaleAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
-    // Set the animation's delegate to self so that we can add callbacks if we want
-    scaleAnimation.delegate = self;
+//    // Create the keyframe animation object
+//    CAKeyframeAnimation *scaleAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+//    // Set the animation's delegate to self so that we can add callbacks if we want
+//    scaleAnimation.delegate = self;
     // Create the transform; we'll scale x and y by 1.5, leaving z alone
     // since this is a 2D animation.
-    CATransform3D transform = CATransform3DMakeScale(sizeScale/delta + 1, sizeScale/delta + 1, 1); // Scale in x and y
-    // Add the keyframes.  Note we have to start and end with CATransformIdentity,
-    // so that the label starts from and returns to its non-transformed state.
-    [scaleAnimation setValues:@[[NSValue valueWithCATransform3D:CATransform3DIdentity],[NSValue valueWithCATransform3D:transform],[NSValue valueWithCATransform3D:CATransform3DIdentity]]];
-    // set the duration of the animation
-    [scaleAnimation setDuration: .5];
-    //[scaleAnimation setRepeatCount:HUGE_VALF];
-    // animate your label layer = rock and roll!
-    [self.timerLabel.layer addAnimation:scaleAnimation forKey:@"scaleText"];
+    _scale = (_scale + (_scale/delta));
+    CATransform3D transform = CATransform3DMakeScale(_scale, _scale, 1); // Scale in x and y
+//    // Add the keyframes.  Note we have to start and end with CATransformIdentity,
+//    // so that the label starts from and returns to its non-transformed state.
+//    [scaleAnimation setValues:@[[NSValue valueWithCATransform3D:CATransform3DIdentity],[NSValue valueWithCATransform3D:transform],[NSValue valueWithCATransform3D:CATransform3DIdentity]]];
+//    // set the duration of the animation
+//    [scaleAnimation setDuration: .5];
+//    //[scaleAnimation setRepeatCount:HUGE_VALF];
+//    // animate your label layer = rock and roll!
+//    [self.timerLabel.layer addAnimation:scaleAnimation forKey:@"scaleText"];
+//    
+    [UIView animateWithDuration:0.5f animations:^{
+        CAKeyframeAnimation *scaleAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+            scaleAnimation.delegate = self;
+        [scaleAnimation setValues:@[[NSValue valueWithCATransform3D:CATransform3DIdentity],[NSValue valueWithCATransform3D:transform]/*,[NSValue valueWithCATransform3D:CATransform3DIdentity]*/]];
+        [self.timerLabel.layer addAnimation:scaleAnimation forKey:@"scaleText"];
+    }completion:^(BOOL finished){
+//            [self rockLabel];
+    }];
     
-    [self rockLabel];
+
     
     
    
@@ -144,15 +125,38 @@
     //fromValue is implied as the current location of the layer
     [spin setFromValue:@(-M_PI_4 / delta  * arc4random_uniform(2))];
     [spin setToValue:@(M_PI_4 / delta * arc4random_uniform(2))]; //transform.rotation is noted in radians format within the documentation. This means that 2*PI radians is a full rotation... 0 radians is no rotation
-    [spin setDuration:0.3];
-    [spin setAutoreverses:YES];
-    [spin setRepeatCount:HUGE_VALF];
+    [spin setDuration:0.0];
+//    [spin setAutoreverses:YES];
+//    [spin setRepeatCount:HUGE_VALF];
     
     
     //Kick off the animation by adding it to the layer
     [self.timerLabel.layer addAnimation:spin forKey:@"spinAnimation"]; //keep in mind that this key is NOT the key path, it is simply a human-readable name for this animation...
 
 }
+
+-(void)clearAbortInfo
+{
+    self.codeTextView.text = @"";
+    [self.codeTextView resignFirstResponder];
+}
+
+#pragma mark - Coundown functions
+
+-(void)initiateCountDown
+{
+    _scale = maxScaleForLabel;
+    _startDate = [NSDate date];
+    self.timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
+    
+    self.labelAnimation = [NSTimer scheduledTimerWithTimeInterval:0.8f target:self selector:@selector(scaleLabel) userInfo:nil repeats:YES];
+    //[self rockLabel];
+    [self fadeLabelInAndOut];
+    
+    
+}
+
 
 -(void)countDown
 {
@@ -162,8 +166,8 @@
     NSTimeInterval delta = timeToCountDownFrom - elaspsedTime;
     
     if (delta <= 0) {
-        self.timerLabel.text = @"Boom!";
         [self countedDownAllTheWay];
+        self.timerLabel.text = @"Boom!";
         return;
     }
     
@@ -172,11 +176,13 @@
     self.timerLabel.text = [NSString stringWithFormat:@"Self Destruct In: %f", delta];
 }
 
--(void)clearAbortInfo
+-(void)endCountDown
 {
-    self.codeTextView.text = @"";
-    [self.codeTextView resignFirstResponder];
+    [self.timer invalidate];
+    [self.labelAnimation invalidate];
+    self.timerLabel.text = @"Abort!";
 }
+
 
 -(void)countedDownAllTheWay
 {
@@ -204,7 +210,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
+
     //[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(initiateCountDown) userInfo:nil repeats:YES];
     [self initiateCountDown];
     
@@ -215,6 +221,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(NSTimer *)timer{
+    if (!_timer) {
+        _timer = [[NSTimer alloc]init];
+    }
+    return _timer;
+}
+
+
 
 
 

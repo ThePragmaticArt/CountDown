@@ -22,6 +22,10 @@
 		592EFD971718AF6000117EC2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592EFD961718AF6000117EC2 /* QuartzCore.framework */; };
 		592EFD9A1718BCA800117EC2 /* BoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 592EFD991718BCA800117EC2 /* BoomView.m */; };
 		592EFD9E1718C2E900117EC2 /* BoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 592EFD9D1718C2E900117EC2 /* BoomView.xib */; };
+		5985C6CF1719EC61005162E3 /* blueButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 5985C6CD1719EC61005162E3 /* blueButtonHighlight.png */; };
+		5985C6D01719EC61005162E3 /* blueButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5985C6CE1719EC61005162E3 /* blueButtonHighlight@2x.png */; };
+		5985C6D31719ED4D005162E3 /* blueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5985C6D11719ED4D005162E3 /* blueButton.png */; };
+		5985C6D41719ED4D005162E3 /* blueButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5985C6D21719ED4D005162E3 /* blueButton@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		592EFD981718BCA800117EC2 /* BoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoomView.h; sourceTree = "<group>"; };
 		592EFD991718BCA800117EC2 /* BoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoomView.m; sourceTree = "<group>"; };
 		592EFD9D1718C2E900117EC2 /* BoomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoomView.xib; sourceTree = "<group>"; };
+		5985C6CD1719EC61005162E3 /* blueButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButtonHighlight.png; sourceTree = "<group>"; };
+		5985C6CE1719EC61005162E3 /* blueButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueButtonHighlight@2x.png"; sourceTree = "<group>"; };
+		5985C6D11719ED4D005162E3 /* blueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButton.png; sourceTree = "<group>"; };
+		5985C6D21719ED4D005162E3 /* blueButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueButton@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,10 @@
 				592EFD9D1718C2E900117EC2 /* BoomView.xib */,
 				592EFD86171897DA00117EC2 /* CountDownViewController_iPhone.xib */,
 				592EFD89171897DA00117EC2 /* CountDownViewController_iPad.xib */,
+				5985C6CD1719EC61005162E3 /* blueButtonHighlight.png */,
+				5985C6CE1719EC61005162E3 /* blueButtonHighlight@2x.png */,
+				5985C6D11719ED4D005162E3 /* blueButton.png */,
+				5985C6D21719ED4D005162E3 /* blueButton@2x.png */,
 				592EFD72171897DA00117EC2 /* Supporting Files */,
 			);
 			path = CountDown;
@@ -181,6 +193,10 @@
 				592EFD88171897DA00117EC2 /* CountDownViewController_iPhone.xib in Resources */,
 				592EFD8B171897DA00117EC2 /* CountDownViewController_iPad.xib in Resources */,
 				592EFD9E1718C2E900117EC2 /* BoomView.xib in Resources */,
+				5985C6CF1719EC61005162E3 /* blueButtonHighlight.png in Resources */,
+				5985C6D01719EC61005162E3 /* blueButtonHighlight@2x.png in Resources */,
+				5985C6D31719ED4D005162E3 /* blueButton.png in Resources */,
+				5985C6D41719ED4D005162E3 /* blueButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
