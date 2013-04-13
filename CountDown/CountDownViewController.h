@@ -6,8 +6,7 @@
 //  Copyright (c) 2013 TheGamingArt. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
-@interface CountDownViewController : UIViewController
+@interface CountDownViewController : UIViewController 
 
 @end

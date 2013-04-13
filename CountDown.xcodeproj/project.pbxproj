@@ -19,6 +19,9 @@
 		592EFD85171897DA00117EC2 /* CountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592EFD84171897DA00117EC2 /* CountDownViewController.m */; };
 		592EFD88171897DA00117EC2 /* CountDownViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 592EFD86171897DA00117EC2 /* CountDownViewController_iPhone.xib */; };
 		592EFD8B171897DA00117EC2 /* CountDownViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 592EFD89171897DA00117EC2 /* CountDownViewController_iPad.xib */; };
+		592EFD971718AF6000117EC2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592EFD961718AF6000117EC2 /* QuartzCore.framework */; };
+		592EFD9A1718BCA800117EC2 /* BoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 592EFD991718BCA800117EC2 /* BoomView.m */; };
+		592EFD9E1718C2E900117EC2 /* BoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 592EFD9D1718C2E900117EC2 /* BoomView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,10 @@
 		592EFD84171897DA00117EC2 /* CountDownViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDownViewController.m; sourceTree = "<group>"; };
 		592EFD87171897DA00117EC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CountDownViewController_iPhone.xib; sourceTree = "<group>"; };
 		592EFD8A171897DA00117EC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CountDownViewController_iPad.xib; sourceTree = "<group>"; };
+		592EFD961718AF6000117EC2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		592EFD981718BCA800117EC2 /* BoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoomView.h; sourceTree = "<group>"; };
+		592EFD991718BCA800117EC2 /* BoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoomView.m; sourceTree = "<group>"; };
+		592EFD9D1718C2E900117EC2 /* BoomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoomView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				592EFD971718AF6000117EC2 /* QuartzCore.framework in Frameworks */,
 				592EFD6C171897DA00117EC2 /* UIKit.framework in Frameworks */,
 				592EFD6E171897DA00117EC2 /* Foundation.framework in Frameworks */,
 				592EFD70171897DA00117EC2 /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +83,7 @@
 		592EFD6A171897DA00117EC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				592EFD961718AF6000117EC2 /* QuartzCore.framework */,
 				592EFD6B171897DA00117EC2 /* UIKit.framework */,
 				592EFD6D171897DA00117EC2 /* Foundation.framework */,
 				592EFD6F171897DA00117EC2 /* CoreGraphics.framework */,
@@ -89,6 +98,9 @@
 				592EFD7B171897DA00117EC2 /* CountDownAppDelegate.m */,
 				592EFD83171897DA00117EC2 /* CountDownViewController.h */,
 				592EFD84171897DA00117EC2 /* CountDownViewController.m */,
+				592EFD981718BCA800117EC2 /* BoomView.h */,
+				592EFD991718BCA800117EC2 /* BoomView.m */,
+				592EFD9D1718C2E900117EC2 /* BoomView.xib */,
 				592EFD86171897DA00117EC2 /* CountDownViewController_iPhone.xib */,
 				592EFD89171897DA00117EC2 /* CountDownViewController_iPad.xib */,
 				592EFD72171897DA00117EC2 /* Supporting Files */,
@@ -168,6 +180,7 @@
 				592EFD82171897DA00117EC2 /* Default-568h@2x.png in Resources */,
 				592EFD88171897DA00117EC2 /* CountDownViewController_iPhone.xib in Resources */,
 				592EFD8B171897DA00117EC2 /* CountDownViewController_iPad.xib in Resources */,
+				592EFD9E1718C2E900117EC2 /* BoomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +194,7 @@
 				592EFD78171897DA00117EC2 /* main.m in Sources */,
 				592EFD7C171897DA00117EC2 /* CountDownAppDelegate.m in Sources */,
 				592EFD85171897DA00117EC2 /* CountDownViewController.m in Sources */,
+				592EFD9A1718BCA800117EC2 /* BoomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +327,7 @@
 				592EFD90171897DA00117EC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
