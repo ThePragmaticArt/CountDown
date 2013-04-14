@@ -9,6 +9,7 @@
 #import "CountDownViewController.h"
 #import "BoomView.h"
 #import <QuartzCore/QuartzCore.h>
+#import <AVFoundation/AVFoundation.h>
 
 #define timeToCountDownFrom 10
 #define maxScaleForLabel 2
@@ -26,6 +27,7 @@
 {
     NSDate *_startDate;
     double _scale;
+    AVAudioPlayer *_player;
 }
 
 #pragma mark - textField delegate functions
@@ -36,6 +38,7 @@
     if ([textField.text isEqualToString:@"1234"]) {
         [self endCountDown];
         BoomView *boomView = [[BoomView alloc] init];
+        
         [boomView setCompletionBlock:^(BOOL again)
          {
              if (again) {
@@ -45,6 +48,13 @@
 
         boomView.displayLabel.text = @"Launch Aborted";
         [self.view addSubview:boomView];
+        
+        NSString *alertSoundPath = [[NSBundle mainBundle] pathForResource:@"DoorShut" ofType:@"m4a"];
+        NSURL *urlForSound = [NSURL fileURLWithPath:alertSoundPath];
+        _player = [[AVAudioPlayer alloc]initWithContentsOfURL:urlForSound error:nil];
+        _player.numberOfLoops = 0;
+        [_player play];
+
     }
     
     [self clearAbortInfo];
@@ -145,6 +155,12 @@
 
 -(void)initiateCountDown
 {
+    NSString *alertSoundPath = [[NSBundle mainBundle] pathForResource:@"AlertSound" ofType:@"mp3"];
+    NSURL *urlForSound = [NSURL fileURLWithPath:alertSoundPath];
+    _player = [[AVAudioPlayer alloc]initWithContentsOfURL:urlForSound error:nil];
+    _player.numberOfLoops = -1;
+    [_player play];
+    
     _scale = maxScaleForLabel;
     _startDate = [NSDate date];
     self.timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
@@ -171,13 +187,15 @@
         return;
     }
     
-
     
-    self.timerLabel.text = [NSString stringWithFormat:@"Self Destruct In: %f", delta];
+    NSAttributedString *alertString = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"Self Destruct In: %f", delta] attributes:@{ NSForegroundColorAttributeName : [UIColor blackColor] , NSStrokeWidthAttributeName : @-5, NSStrokeColorAttributeName : [UIColor redColor] }];
+    
+    self.timerLabel.attributedText = alertString;
 }
 
 -(void)endCountDown
 {
+    [_player stop];
     [self.timer invalidate];
     [self.labelAnimation invalidate];
     self.timerLabel.text = @"Abort!";
@@ -190,6 +208,14 @@
     [self clearAbortInfo];
     BoomView *boomView = [[BoomView alloc] init];
     [self.view addSubview:boomView];
+    
+    
+    NSString *alertSoundPath = [[NSBundle mainBundle] pathForResource:@"DoorShut" ofType:@"m4a"];
+    NSURL *urlForSound = [NSURL fileURLWithPath:alertSoundPath];
+    _player = [[AVAudioPlayer alloc]initWithContentsOfURL:urlForSound error:nil];
+    _player.numberOfLoops = 0;
+    [_player play];
+
     
    // NSLog(@"SuperView : %@", boomView.superview);
     [boomView setCompletionBlock:^(BOOL again)

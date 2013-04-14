@@ -52,8 +52,8 @@ void drawLinearGradient(CGContextRef context, CGRect rect, UIColor *startColor, 
         self.opaque = NO;
         self.backgroundColor = [UIColor clearColor];
 
-        _lightColor = [UIColor colorWithRed:105.0f/255.0f green:179.0f/255.0f blue:216.0f/255.0f alpha:1.0];
-        _endColor = [UIColor colorWithRed:21.0/255.0 green:92.0/255.0 blue:136.0/255.0 alpha:1.0];
+        _lightColor = [UIColor colorWithRed:0.71f green:0.71f blue:0.71f alpha:1.0];
+        _endColor = [UIColor colorWithRed:0.99f green:0.99f blue:0.99f alpha:1.0];
     }
     return self;
 }
@@ -103,6 +103,14 @@ void drawLinearGradient(CGContextRef context, CGRect rect, UIColor *startColor, 
 - (IBAction)removeView
 {
     NSLog(@"Remove");
+    
+
+    
+
+        self.againButton.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);   
+    
+
+    
     if (self.completionBlock != nil) {
 
         [CATransaction begin];
@@ -140,8 +148,6 @@ void drawLinearGradient(CGContextRef context, CGRect rect, UIColor *startColor, 
         [UIView commitAnimations];
         [CATransaction commit];
         
-        
-        
     }
 }
 
@@ -173,6 +179,18 @@ void drawLinearGradient(CGContextRef context, CGRect rect, UIColor *startColor, 
     CGContextSetLineWidth(context, 1.0);
     CGContextStrokeRect(context, rectFor1PxStroke(_coloredBoxRect));
     
+    
+    if ([self.againButton state] == UIControlStateNormal) {
+        
+    self.againButton.layer.cornerRadius = 8.0f;
+    self.againButton.layer.masksToBounds = NO;
+    self.againButton.layer.borderWidth = 1.0f;
+    
+    self.againButton.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.againButton.layer.shadowOpacity = 0.8;
+    self.againButton.layer.shadowRadius = 3.0f;
+    self.againButton.layer.shadowOffset = CGSizeMake(3.0f, 3.0f);
+    }
     
 
 }

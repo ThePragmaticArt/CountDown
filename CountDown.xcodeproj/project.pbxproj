@@ -22,6 +22,9 @@
 		592EFD971718AF6000117EC2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592EFD961718AF6000117EC2 /* QuartzCore.framework */; };
 		592EFD9A1718BCA800117EC2 /* BoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 592EFD991718BCA800117EC2 /* BoomView.m */; };
 		592EFD9E1718C2E900117EC2 /* BoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 592EFD9D1718C2E900117EC2 /* BoomView.xib */; };
+		5942B7B6171A35460022149E /* AlertSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5942B7B5171A35460022149E /* AlertSound.mp3 */; };
+		5942B7B8171A35A70022149E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5942B7B7171A35A70022149E /* AVFoundation.framework */; };
+		5942B7BC171A490A0022149E /* DoorShut.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5942B7BB171A490A0022149E /* DoorShut.m4a */; };
 		5985C6CF1719EC61005162E3 /* blueButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 5985C6CD1719EC61005162E3 /* blueButtonHighlight.png */; };
 		5985C6D01719EC61005162E3 /* blueButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5985C6CE1719EC61005162E3 /* blueButtonHighlight@2x.png */; };
 		5985C6D31719ED4D005162E3 /* blueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5985C6D11719ED4D005162E3 /* blueButton.png */; };
@@ -50,6 +53,9 @@
 		592EFD981718BCA800117EC2 /* BoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoomView.h; sourceTree = "<group>"; };
 		592EFD991718BCA800117EC2 /* BoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoomView.m; sourceTree = "<group>"; };
 		592EFD9D1718C2E900117EC2 /* BoomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoomView.xib; sourceTree = "<group>"; };
+		5942B7B5171A35460022149E /* AlertSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AlertSound.mp3; sourceTree = "<group>"; };
+		5942B7B7171A35A70022149E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5942B7BB171A490A0022149E /* DoorShut.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = DoorShut.m4a; sourceTree = "<group>"; };
 		5985C6CD1719EC61005162E3 /* blueButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButtonHighlight.png; sourceTree = "<group>"; };
 		5985C6CE1719EC61005162E3 /* blueButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueButtonHighlight@2x.png"; sourceTree = "<group>"; };
 		5985C6D11719ED4D005162E3 /* blueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButton.png; sourceTree = "<group>"; };
@@ -61,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5942B7B8171A35A70022149E /* AVFoundation.framework in Frameworks */,
 				592EFD971718AF6000117EC2 /* QuartzCore.framework in Frameworks */,
 				592EFD6C171897DA00117EC2 /* UIKit.framework in Frameworks */,
 				592EFD6E171897DA00117EC2 /* Foundation.framework in Frameworks */,
@@ -74,6 +81,7 @@
 		592EFD5F171897DA00117EC2 = {
 			isa = PBXGroup;
 			children = (
+				5942B7B7171A35A70022149E /* AVFoundation.framework */,
 				592EFD71171897DA00117EC2 /* CountDown */,
 				592EFD6A171897DA00117EC2 /* Frameworks */,
 				592EFD69171897DA00117EC2 /* Products */,
@@ -115,6 +123,8 @@
 				5985C6CE1719EC61005162E3 /* blueButtonHighlight@2x.png */,
 				5985C6D11719ED4D005162E3 /* blueButton.png */,
 				5985C6D21719ED4D005162E3 /* blueButton@2x.png */,
+				5942B7BB171A490A0022149E /* DoorShut.m4a */,
+				5942B7B5171A35460022149E /* AlertSound.mp3 */,
 				592EFD72171897DA00117EC2 /* Supporting Files */,
 			);
 			path = CountDown;
@@ -197,6 +207,8 @@
 				5985C6D01719EC61005162E3 /* blueButtonHighlight@2x.png in Resources */,
 				5985C6D31719ED4D005162E3 /* blueButton.png in Resources */,
 				5985C6D41719ED4D005162E3 /* blueButton@2x.png in Resources */,
+				5942B7B6171A35460022149E /* AlertSound.mp3 in Resources */,
+				5942B7BC171A490A0022149E /* DoorShut.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
