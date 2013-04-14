@@ -11,7 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <AVFoundation/AVFoundation.h>
 
-#define timeToCountDownFrom 10
+#define timeToCountDownFrom 15
 #define maxScaleForLabel 2
 
 @interface CountDownViewController () <UITextFieldDelegate>
@@ -25,9 +25,9 @@
 
 @implementation CountDownViewController
 {
-    NSDate *_startDate;
-    double _scale;
-    AVAudioPlayer *_player;
+    NSDate *_startDate; //Main counter for countdown
+    double _scale; //scale for label size when animating bigger/smaller
+    AVAudioPlayer *_player; //Defaulted audio player
 }
 
 #pragma mark - textField delegate functions
@@ -122,7 +122,7 @@
 
 -(void)rockLabel
 {
-#pragma mark - spinning animation for label
+#pragma mark - spinning animation for label if desired
     NSDate *currentDate = [NSDate date];
     NSTimeInterval elaspsedTime = [currentDate timeIntervalSinceDate:_startDate];
 
@@ -235,7 +235,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
 
     //[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(initiateCountDown) userInfo:nil repeats:YES];
     [self initiateCountDown];

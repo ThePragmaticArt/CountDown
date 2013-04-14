@@ -9,6 +9,9 @@
 #import "BoomView.h"
 #import <QuartzCore/QuartzCore.h>
 
+#define SIZE_RATIO 1
+#define LEFT_MARGIN 0
+
 @interface BoomView (){
     
     UIColor *_lightColor;
@@ -22,8 +25,7 @@
 
 @end
 
-#define SIZE_RATIO 1
-#define LEFT_MARGIN 0
+
 void drawGlossAndGradient(CGContextRef context, CGRect rect, UIColor *startColor,UIColor *endColor);
 
 

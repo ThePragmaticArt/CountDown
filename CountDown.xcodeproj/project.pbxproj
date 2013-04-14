@@ -29,6 +29,8 @@
 		5985C6D01719EC61005162E3 /* blueButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5985C6CE1719EC61005162E3 /* blueButtonHighlight@2x.png */; };
 		5985C6D31719ED4D005162E3 /* blueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5985C6D11719ED4D005162E3 /* blueButton.png */; };
 		5985C6D41719ED4D005162E3 /* blueButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5985C6D21719ED4D005162E3 /* blueButton@2x.png */; };
+		59903D34171A58AC000644A7 /* Icon CountDown114.png in Resources */ = {isa = PBXBuildFile; fileRef = 59903D33171A58AC000644A7 /* Icon CountDown114.png */; };
+		59903D36171A58D2000644A7 /* Icon CountDown57.png in Resources */ = {isa = PBXBuildFile; fileRef = 59903D35171A58D2000644A7 /* Icon CountDown57.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		5985C6CE1719EC61005162E3 /* blueButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueButtonHighlight@2x.png"; sourceTree = "<group>"; };
 		5985C6D11719ED4D005162E3 /* blueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButton.png; sourceTree = "<group>"; };
 		5985C6D21719ED4D005162E3 /* blueButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueButton@2x.png"; sourceTree = "<group>"; };
+		59903D33171A58AC000644A7 /* Icon CountDown114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon CountDown114.png"; sourceTree = "<group>"; };
+		59903D35171A58D2000644A7 /* Icon CountDown57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon CountDown57.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 		592EFD5F171897DA00117EC2 = {
 			isa = PBXGroup;
 			children = (
+				59903D35171A58D2000644A7 /* Icon CountDown57.png */,
+				59903D33171A58AC000644A7 /* Icon CountDown114.png */,
 				5942B7B7171A35A70022149E /* AVFoundation.framework */,
 				592EFD71171897DA00117EC2 /* CountDown */,
 				592EFD6A171897DA00117EC2 /* Frameworks */,
@@ -209,6 +215,8 @@
 				5985C6D41719ED4D005162E3 /* blueButton@2x.png in Resources */,
 				5942B7B6171A35460022149E /* AlertSound.mp3 in Resources */,
 				5942B7BC171A490A0022149E /* DoorShut.m4a in Resources */,
+				59903D34171A58AC000644A7 /* Icon CountDown114.png in Resources */,
+				59903D36171A58D2000644A7 /* Icon CountDown57.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
